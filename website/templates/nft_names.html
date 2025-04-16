@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFT Names</title>
+</head>
+<body style="background-color: #f0f4f8;">
+
+  <!-- 🔙 Back link in top-left -->
+  <div style="position: absolute; top: 20px; left: 20px;">
+    <a href="/" style="text-decoration: none; font-size: 16px;">← Go Back to Main Page</a>
+  </div>
+
+  <!-- Centered content -->
+  <div style="text-align: center;">
+    <h1>NFT Names (Collections)</h1>
+
+    <table border="1" style="margin: 0 auto; font-size: 20px; width: 80%; text-align: center;">
+      <tr>
+        <th>Collection Name</th>
+      </tr>
+      {% for item in collections %}
+      <tr>
+        <td>{{ item['Collections'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+</body>
+</html>

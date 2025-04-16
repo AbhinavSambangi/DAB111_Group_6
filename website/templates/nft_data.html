@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFT Sales Data</title>
+</head>
+<body style="background-color: #f0f4f8;">
+
+  <!-- 🔙 Back link in top-left -->
+  <div style="position: absolute; top: 20px; left: 20px;">
+    <a href="/" style="text-decoration: none; font-size: 16px;">← Go Back to Main Page</a>
+  </div>
+
+  <h1 style="text-align: center;">Complete NFT Sales Data</h1>
+
+  <table border="1" style="margin: 0 auto; font-size: 20px; width: 80%; text-align: center;">
+    <thead>
+      <tr>
+        <th>Collections</th>
+        <th>Sales</th>
+        <th>Buyers</th>
+        <th>Owners</th>
+        <th>Transactions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+        <tr>
+          <td>{{ row['Collections'] }}</td>
+          <td>{{ row['Sales'] }}</td>
+          <td>{{ row['Buyers'] }}</td>
+          <td>{{ row['Owners'] }}</td>
+          <td>{{ row['Transactions'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>
